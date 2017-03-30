@@ -145,6 +145,7 @@ if (IS_DEV) {
             minimize: true,
             debug: false
         }),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new ExtractTextPlugin('styles.css'),
         new webpack.optimize.UglifyJsPlugin({
             beautify: false,

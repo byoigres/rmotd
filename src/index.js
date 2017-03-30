@@ -43,6 +43,14 @@ class Clock extends Component {
         return (
             <div className={styles.content}>
                 <div className={styles['time-content']}>
+                    <h1>
+                        Remaining Minutes of the Day
+                    </h1>
+                    <blockquote>
+                        We all have the exact same 1440 minutes per day.
+                        You don’t get more or less than Mother Teresa, Leonardo Da Vinci, Steve Jobs, or Martin Luther King Jr.
+                        Use it wisely.
+                    </blockquote>
                     <Minutes>{ formatNumber(remainingMinutes) }</Minutes>
                     <p>
                         minutes left of <strong>{ formatNumber(this.totalMinutes) }</strong>

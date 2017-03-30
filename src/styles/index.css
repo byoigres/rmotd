@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato:400,700');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato:400,700|Slabo+27px');
 
 :root {
     --base-font-size: 16px;
     --base-color: #fff;
-    --page-bg-color: #3f51b5;
+    --page-bg-color: #1976d2;
 }
 
 html, body {
@@ -17,6 +17,15 @@ body {
     color: var(--base-color);
     font-family: Lato;
     font-size: var(--base-font-size);
+}
+
+blockquote {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: Slabo;
+    padding: 0 5rem;
 }
 
 p {

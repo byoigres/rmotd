@@ -33,7 +33,7 @@ webpackConfig = {
     },
     output: {
         path: path.join(BASE_PATH, 'docs'),
-        publicPath: '/',
+        publicPath: IS_DEV ? '/' : '/rmofd/',
         filename: '[name].js',
         sourceMapFilename: '[name].map.js'
     },
@@ -101,6 +101,7 @@ webpackConfig = {
         new HtmlWebpackPlugin({
             template: './src/template.html',
             filename: 'index.html',
+            // minify: !IS_DEV,
             title: 'Remaining Minutes of the Day',
             hash: false,
             inject: 'body',

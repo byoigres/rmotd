@@ -33,7 +33,7 @@ webpackConfig = {
     },
     output: {
         path: path.join(BASE_PATH, 'docs'),
-        publicPath: IS_DEV ? '/' : '/rmofd/',
+        publicPath: IS_DEV ? '/' : '/rmotd/',
         filename: '[name].js',
         sourceMapFilename: '[name].map.js'
     },

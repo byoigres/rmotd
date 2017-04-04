@@ -113,6 +113,10 @@ p {
     }
 }
 
+.square-path {
+    fill: var(--page-bg-color);
+}
+
 @media only screen and (width < 62rem) {
     .header {
         font-size: 2.3rem;

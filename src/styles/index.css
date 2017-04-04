@@ -45,6 +45,9 @@ p {
         text-align: center;
         background-color: var(--page-bg-color);
         min-height: 100%;
+        & > * {
+            z-index: 5;
+        }
 
         & .minutes-description {
             font-size: 1.2rem;
@@ -90,6 +93,16 @@ p {
         text-transform: uppercase;
         color: var(--base-color);
     }
+}
+
+.square-grid {
+    background-color: var(--page-bg-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 @media only screen and (width < 62rem) {

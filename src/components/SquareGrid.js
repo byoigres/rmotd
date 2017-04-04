@@ -7,7 +7,7 @@ const SquareGrid = () => (
     <svg width="100%" height="100%" viewBox="0,0,100%,100%" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <pattern id="smallGrid" width="1.388888888888889%" height="5%" patternUnits="userSpaceOnUse">
-                <path fill="#2e99e5" d="M0 0h960v960H0z" stroke="gray" stroke-width="0.5"/>
+                <path className={styles['square-path']} d="M0 0h960v960H0z" stroke="gray" stroke-width="0.5"/>
             </pattern>
             <pattern id="grid" width="8.333333333333333%" height="50%" patternUnits="userSpaceOnUse">
                 <rect width="100%" height="100%" fill="url(#smallGrid)"/>

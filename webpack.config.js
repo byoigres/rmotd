@@ -26,14 +26,14 @@ const postcssOptions = {
 };
 
 webpackConfig = {
-    name: 'rmotd',
+    name: 'minutes',
     target: 'web',
     entry: {
         app: './src/index.js'
     },
     output: {
         path: path.join(BASE_PATH, 'docs'),
-        publicPath: IS_DEV ? '/' : '/rmotd/',
+        publicPath: IS_DEV ? '/' : '/minutes/',
         filename: '[name].js',
         sourceMapFilename: '[name].map.js'
     },

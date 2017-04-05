@@ -13,9 +13,12 @@ class MinutesContainer extends Component {
         this.totalMinutes = 1440;
         const currentDate = new Date();
         const elapsedMinutes = (currentDate.getHours() * 60) + currentDate.getMinutes();
+        const remainingSeconds = currentDate.getSeconds();
+
         const remainingMinutes = this.totalMinutes - elapsedMinutes;
         this.state = {
-            remainingMinutes
+            remainingMinutes,
+            remainingSeconds
         };
     }
 
@@ -23,10 +26,12 @@ class MinutesContainer extends Component {
         this.timer = setInterval(() => {
             const currentDate = new Date();
             const elapsedMinutes = (currentDate.getHours() * 60) + currentDate.getMinutes();
+            const remainingSeconds = currentDate.getSeconds();
             const remainingMinutes = this.totalMinutes - elapsedMinutes;
 
             this.setState({
-                remainingMinutes
+                remainingMinutes,
+                remainingSeconds
             });
         }, 1000);
     }
@@ -38,7 +43,10 @@ class MinutesContainer extends Component {
     render(props, state) {
         return (
             <div className={styles['minutes-container']}>
-              <SquareGrid remainingMinutes={this.state.remainingMinutes} />
+              <SquareGrid
+                remainingMinutes={this.state.remainingMinutes}
+                remainingSeconds={this.state.remainingSeconds}
+              />
               <h1 className={styles.header}>
                   Remaining Minutes of the Day
               </h1>

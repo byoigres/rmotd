@@ -11,8 +11,11 @@ class MinutesContainer extends Component {
     constructor() {
         super();
         this.totalMinutes = 1440;
+        const currentDate = new Date();
+        const elapsedMinutes = (currentDate.getHours() * 60) + currentDate.getMinutes();
+        const remainingMinutes = this.totalMinutes - elapsedMinutes;
         this.state = {
-            remainingMinutes: 0
+            remainingMinutes
         };
     }
 
@@ -35,7 +38,7 @@ class MinutesContainer extends Component {
     render(props, state) {
         return (
             <div className={styles['minutes-container']}>
-              <SquareGrid />
+              <SquareGrid remainingMinutes={this.state.remainingMinutes} />
               <h1 className={styles.header}>
                   Remaining Minutes of the Day
               </h1>

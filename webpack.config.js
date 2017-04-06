@@ -7,6 +7,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 // PostCSS plugins
 const PostcssNext = require('postcss-cssnext');
 const PostcssMediaMinMax = require('postcss-media-minmax');
@@ -145,6 +146,11 @@ if (IS_DEV) {
             minimize: true,
             debug: false
         }),
+        new CopyWebpackPlugin([
+            { from: './static/favicon.ico' },
+            { from: './static/images/M192.png', to: 'images/M192.png' },
+            { from: './static/manifest.json' }
+        ]),
         // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
         new ExtractTextPlugin('styles.css'),
         new webpack.optimize.UglifyJsPlugin({

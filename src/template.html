@@ -4,10 +4,14 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/minutes/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/minutes/images/M192.png" sizes="192x192">
     <link rel="manifest" href="/minutes/manifest.json">
-    var host = "byoigres.com";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
+    <script>
+      var host = "byoigres.com";
+      if ((host == window.location.host) && (window.location.protocol != "https:"))
         window.location.protocol = "https";
+    </script>
   </head>
   <body>
   </body>

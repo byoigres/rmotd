@@ -11,15 +11,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 // PostCSS plugins
 const PostcssNext = require('postcss-cssnext');
 const PostcssMediaMinMax = require('postcss-media-minmax');
+const PostcssImport = require('postcss-import');
+
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
+const PUBLIC_PATH = IS_DEV ? '/' : '/minutes/';
 
 const postcssOptions = {
   plugins: () => [
-    // PostcssImport,
-    // PostssCustomMedia(),
+    PostcssImport(),
     PostcssMediaMinMax(),
-    // PostcssExtend(),
     PostcssNext({
       browsers: ['last 2 versions', '> 5%'],
     }),
@@ -34,7 +35,7 @@ webpackConfig = {
     },
     output: {
         path: path.join(BASE_PATH, 'docs'),
-        publicPath: IS_DEV ? '/' : '/minutes/',
+        publicPath: PUBLIC_PATH,
         filename: '[name].js',
         sourceMapFilename: '[name].map.js'
     },

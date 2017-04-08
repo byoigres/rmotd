@@ -8,6 +8,6 @@ const MinutesCounter = ({ children }) => (
   </div>
 );
 
-MinutesCounter.displayName = "MinutesCounter";
+MinutesCounter.displayName = 'MinutesCounter';
 
 export default MinutesCounter;

@@ -1,8 +1,9 @@
 import { h, Component } from 'preact';
-import styles from '../styles';
+import styles from 'styles';
 import MinutesCounter from '../components/MinutesCounter.js';
 import FloatingButton from '../components/FloatingButton.js';
 import SquareGrid from '../components/SquareGrid.js';
+import Navbar from '../components/Navbar.js';
 
 const round = (value, decimals) => Number(Math.round(`${value}e${decimals}`)+`e-${decimals}`);
 const formatNumber = number => Intl.NumberFormat().format(number);
@@ -43,6 +44,7 @@ class MinutesContainer extends Component {
     render(props, state) {
         return (
             <div className={styles['minutes-container']}>
+            <Navbar />
               <SquareGrid
                 remainingMinutes={this.state.remainingMinutes}
                 remainingSeconds={this.state.remainingSeconds}

@@ -3,7 +3,15 @@ import styles from 'styles';
 
 const Navbar = () => (
     <div className={styles.navbar}>
-        <div className={styles['navbar-logo']}>Minutes</div>
+        <div className={styles['navbar-container']}>
+            <div className={styles['navbar-brand']}>
+                <a href="#">Minutes</a>
+            </div>
+            <div className="navbar-list">
+                <a href="#" className="navbar-item">What is this?</a>
+                <a href="#" className="navbar-item">About</a>
+            </div>
+        </div>
     </div>
 );
 

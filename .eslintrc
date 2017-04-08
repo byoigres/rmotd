@@ -5,10 +5,14 @@
       "experimentalObjectRestSpread": true,
     }
   },
+  "globals": {
+    "h": true
+  },
   "env": {
     "browser": true
   },
   "rules": {
+    "no-unused-vars": [0, { "varsIgnorePattern": "^h$" }],
     "import/no-unresolved": [
       2, {
         "ignore": [

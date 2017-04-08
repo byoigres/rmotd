@@ -17,6 +17,9 @@ body {
     color: var(--base-color);
     font-family: Lato;
     font-size: var(--base-font-size);
+    /*
+    margin-top: 3rem;
+    */
 }
 
 blockquote {
@@ -42,6 +45,8 @@ p {
     width: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
+    margin-top: 3rem;
 
     & > .minutes-container {
         display: flex;
@@ -122,6 +127,22 @@ p {
 
 .square-path {
     fill: var(--page-bg-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    /* REMOVE THIS */
+    visibility: hidden;
+    width: 100%;
+    z-index: 8;
+    color: black;
+    height: 3rem;
+
+    background-color: white;
+    & .navbar-logo {
+
+    }
 }
 
 @media only screen and (width < 62rem) {

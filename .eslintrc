@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "import/no-unresolved": [
+      2, {
+        "ignore": [
+          "^styles$",
+          "^components/"
+        ]
+      }
+    ]
+  }
+}

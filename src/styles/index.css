@@ -15,37 +15,3 @@
 @import './components/navbar';
 @import './components/square-grid';
 @import './components/minutes-counter';
-
-.floatig-button-container {
-    position: absolute;
-    bottom: 1rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-
-    & > .floatig-button {
-        background-color: transparent;
-        border: none;
-        text-transform: uppercase;
-        color: var(--base-color);
-    }
-}
-
-@media only screen and (width < 62rem) {
-    .header {
-        font-size: 2rem;
-        margin: 2rem 1rem;
-    }
-
-    blockquote {
-        font-size: 5rem;
-        display: none;
-    }
-
-}
-
-@media only screen and (width > 62rem) {
-    .minutes-counter {
-        font-size: 18rem;
-    }
-}

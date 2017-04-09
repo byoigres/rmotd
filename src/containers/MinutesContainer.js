@@ -1,9 +1,9 @@
 import { h, Component } from 'preact';
 import styles from 'styles';
-import MinutesCounter from '../components/MinutesCounter.js';
-import FloatingButton from '../components/FloatingButton.js';
-import SquareGrid from '../components/SquareGrid.js';
-import Navbar from '../components/Navbar.js';
+import MinutesCounter from '../components/MinutesCounter';
+import SquareGrid from '../components/SquareGrid';
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 class MinutesContainer extends Component {
   constructor() {
@@ -47,15 +47,7 @@ class MinutesContainer extends Component {
           remainingMinutes={this.state.remainingMinutes}
           remainingSeconds={this.state.remainingSeconds}
         />
-        <h1 className={styles.header}>
-          Remaining Minutes of the Day
-        </h1>
-        <blockquote>
-          We all have the exact same 1440 minutes per day.
-          You don’t get more or less than Mother Teresa, Leonardo Da Vinci,
-          Steve Jobs, or Martin Luther King Jr.
-          Use it wisely.
-        </blockquote>
+        <Header text="Remaining Minutes of the Day" />
         <MinutesCounter remainingMinutes={this.state.remainingMinutes} />
       </div>
     );

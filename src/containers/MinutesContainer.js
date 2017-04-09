@@ -5,8 +5,6 @@ import FloatingButton from '../components/FloatingButton.js';
 import SquareGrid from '../components/SquareGrid.js';
 import Navbar from '../components/Navbar.js';
 
-const formatNumber = number => Intl.NumberFormat().format(number);
-
 class MinutesContainer extends Component {
   constructor() {
     super();
@@ -58,10 +56,7 @@ class MinutesContainer extends Component {
           Steve Jobs, or Martin Luther King Jr.
           Use it wisely.
         </blockquote>
-        <MinutesCounter>{ formatNumber(this.state.remainingMinutes) }</MinutesCounter>
-        <p className={styles['minutes-description']}>
-          minutes left of the day
-        </p>
+        <MinutesCounter remainingMinutes={this.state.remainingMinutes} />
       </div>
     );
   }

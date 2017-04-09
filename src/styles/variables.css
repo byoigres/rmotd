@@ -1,0 +1,6 @@
+:root {
+    --base-font-size: 16px;
+    --base-font-family: 'Lato Regular';
+    --base-color: var(--full-white);
+    --page-bg-color: var(--blue-700);
+}

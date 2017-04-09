@@ -1,0 +1,21 @@
+.square-grid {
+    background-color: var(--page-bg-color);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .square-grid-square {
+        flex: 1 1 auto;
+        height: 5px;
+        width: 5px;
+    }
+}
+
+.square-path {
+    fill: var(--page-bg-color);
+}

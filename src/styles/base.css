@@ -1,0 +1,45 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--base-color);
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+}
+
+blockquote {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: Slabo;
+    padding: 0 5rem;
+}
+
+p {
+    margin: 0.3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* base classes */
+
+.header {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}

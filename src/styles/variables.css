@@ -1,4 +1,6 @@
 :root {
+    --primary-color-1: var(--blue-700);
+    --primary-color-2: var(--blue-500);
     --base-font-size: 16px;
     --base-font-family: 'Lato Regular';
     --base-color: var(--full-white);

@@ -2,16 +2,16 @@ import { h, render, Component } from 'preact';
 import styles from 'styles';
 
 const SquareGrid = ({ remainingMinutes, remainingSeconds }) => {
-  const fillPatter = (_remainingMinutes, x, y) => {
-    const currentMinute = 1440 - ((y * 72) + (x + 1));
+  const fillPatter = (_remainingMinutes, row, column) => {
+    const currentMinute = 1440 - ((column * 72) + (row + 1));
 
     if (currentMinute === _remainingMinutes) {
-      return 'url(#Progress)';
+      return styles['square-grid-path-current-minute'];
     } else if (currentMinute < _remainingMinutes) {
-      return 'none';
+      return styles['square-grid-path-available-minute'];
     }
 
-    return '#2196f3';
+    return styles['square-grid-path-passed-minute'];
   };
 
   return (
@@ -25,18 +25,16 @@ const SquareGrid = ({ remainingMinutes, remainingSeconds }) => {
       >
         <defs>
           <linearGradient id="Progress" x1="0" x2="0" y1="0" y2="1">
-            <stop offset={`${(remainingSeconds * 100) / 60}%`} stop-color="#2196f3" />
-            <stop offset={`${(remainingSeconds * 100) / 60}%`} stop-color="transparent" />
+            <stop className={styles['square-path-gradient-passed']} offset={`${(remainingSeconds * 100) / 60}%`} />
+            <stop className={styles['square-path-gradient-available']} offset={`${(remainingSeconds * 100) / 60}%`} />
           </linearGradient>
         </defs>
         {
-          Array(20).fill().map((_, i) => (
-            Array(72).fill().map((__, j) => (
+          Array(20).fill().map((_, column) => (
+            Array(72).fill().map((__, row) => (
               <path
-                fill={fillPatter(remainingMinutes, j, i)}
-                d={`M${j} ${i}h1v1H${j}z`}
-                stroke="rgba(255, 255, 255, 0.54)"
-                stroke-width="0.01"
+                className={`${styles['square-grid-path']} ${fillPatter(remainingMinutes, row, column)}`}
+                d={`M${row} ${column}h1v1H${row}z`}
               />
             ))
           ))

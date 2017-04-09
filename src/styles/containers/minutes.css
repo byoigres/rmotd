@@ -5,7 +5,7 @@
     justify-content: center;
     overflow: hidden;
     text-align: center;
-    background-color: var(--page-bg-color);
+    background-color: var(--primary-color-1);
     max-width: 76rem;
     width: 100%;
     min-height: 100%;

@@ -1,8 +1,4 @@
 import { h, render, Component } from 'preact';
-import {
-    startOfDay,
-    differenceInMinutes
-} from 'date-fns';
 import styles from './styles';
 import MinutesContainer from './containers/MinutesContainer.js';
 

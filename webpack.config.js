@@ -115,7 +115,7 @@ const webpackConfig = {
 
 if (IS_DEV) {
   webpackConfig.plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin() /* eslint comma-dangle: 0 */
   );
   webpackConfig.devServer = {
     contentBase: './src',
@@ -170,7 +170,7 @@ if (IS_DEV) {
         screw_ie8: true,
       },
       sourceMap: true,
-    }),
+    })
   );
 
   webpackConfig.module.rules.forEach((rule) => {

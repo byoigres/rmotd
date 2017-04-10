@@ -12,6 +12,7 @@
 @import './containers/minutes';
 
 /* components */
+@import './components/main-layout';
 @import './components/navbar';
 @import './components/square-grid';
 @import './components/minutes-counter';

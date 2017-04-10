@@ -1,6 +1,13 @@
 import { h, render, Component } from 'preact';
 import styles from 'styles';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import MinutesContainer from './containers/MinutesContainer.js';
+import WhatIsThisContainer from './containers/WhatIsThisContainer.js';
+import MainLayout from './components/Layouts/MainLayout';
 
 // Enable devtools. You can reduce the size of your app by only including this
 // module in development builds. eg. In Webpack, wrap this with an `if (module.hot) {...}`
@@ -10,9 +17,22 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <div className={styles.content}>
-    <MinutesContainer />
-  </div>
+  <Router>
+    <div className={styles.content}>
+      <Route
+        exact
+        path="/"
+        component={MinutesContainer}
+      />
+      <MainLayout>
+        <Route
+          exact
+          path="/what-is-this"
+          component={WhatIsThisContainer}
+        />
+      </MainLayout>
+    </div>
+  </Router>
 );
 
 render(<App />, document.body);

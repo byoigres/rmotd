@@ -18,6 +18,10 @@ blockquote {
     font-size: 1.3rem;
     font-family: Slabo;
     padding: 0 5rem;
+
+    &.blockquote-big {
+        font-size: 2.3rem;
+    }
 }
 
 p {

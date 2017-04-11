@@ -9,7 +9,7 @@ const Navbar = ({ isTransparent }) => (
       <div className={styles['navbar-brand']}>
         <Link to="/">Minutes</Link>
       </div>
-      <div className={styles['navbar-list']>
+      <div className={styles['navbar-list']}>
         <Link to="/what-is-this" className={styles['navbar-item']}>What is this?</Link>
         <Link to="/about" className={styles['navbar-item']}>About</Link>
       </div>

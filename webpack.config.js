@@ -150,9 +150,9 @@ if (IS_DEV) {
       debug: false,
     }),
     new CopyWebpackPlugin([
-      { from: './static/favicon.ico' },
-      { from: './static/images/M192.png', to: 'images/M192.png' },
-      { from: './static/manifest.json' },
+      { from: './src/public/favicon.ico' },
+      { from: './src/public/images/M192.png', to: 'images/M192.png' },
+      { from: './src/public/manifest.json' },
     ]),
     // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ExtractTextPlugin('styles.css'),

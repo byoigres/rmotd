@@ -30,6 +30,14 @@ const About = () => (
     <p>
       Best of luck in every single goal you have. <strong>May the time be with you</strong>.
     </p>
+
+    <small>Psst, you can contact me within the social media buttons in the main section of <a href="https://byoigres.com">my site</a>.</small>
+
+    <h1>About this project</h1>
+
+    <p>
+      Do you want to know how this project was built? Go to the README file in the <a href="https://github.com/byoigres/minutes" target="_blank" rel="noopener noreferrer">Github repo</a> and find out.
+    </p>
   </div>
 );
 

@@ -1,10 +1,11 @@
 import { h } from 'preact';
+import styles form 'styles';
 import Navbar from '../Navbar';
 
 const MainLayout = ({ children }) => (
-  <div className="main-layout">
+  <div className={styles['main-layout']}>
     <Navbar />
-    <div className="container">
+    <div className={styles['container']}>
       {children}
     </div>
   </div>

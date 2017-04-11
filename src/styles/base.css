@@ -26,6 +26,12 @@ blockquote {
 
 p {
     margin: 0.3rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+p + p {
+    margin-top: 1rem;
 }
 
 a {
@@ -44,7 +50,7 @@ a {
 }
 
 .container {
-    flex: 1;
+    flex: 1 0 auto;
     max-width: 76rem;
     width: 100%;
     

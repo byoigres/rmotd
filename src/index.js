@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import MinutesContainer from './containers/MinutesContainer.js';
 import WhatIsThisContainer from './containers/WhatIsThisContainer.js';
+import About from './containers/About.js';
 import MainLayout from './components/Layouts/MainLayout';
 
 // Enable devtools. You can reduce the size of your app by only including this
@@ -19,18 +20,25 @@ if (process.env.NODE_ENV !== 'production') {
 const App = () => (
   <Router>
     <div className={styles.content}>
-      <Route
-        exact
-        path="/"
-        component={MinutesContainer}
-      />
-      <MainLayout>
+      <Switch>
         <Route
           exact
-          path="/what-is-this"
-          component={WhatIsThisContainer}
+          path="/"
+          component={MinutesContainer}
         />
-      </MainLayout>
+        <MainLayout>
+          <Route
+            exact
+            path="/what-is-this"
+            component={WhatIsThisContainer}
+          />
+          <Route
+            exact
+            path="/about"
+            component={About}
+          />
+        </MainLayout>
+      </Switch>
     </div>
   </Router>
 );

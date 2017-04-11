@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import styles form 'styles';
+import styles from 'styles';
 import Navbar from '../Navbar';
 
 const MainLayout = ({ children }) => (

@@ -35,7 +35,14 @@ p + p {
 }
 
 a {
+    color: var(--primary-color-1);
     text-decoration: none;
+
+    &:hover {
+        color: var(--primary-color-2);
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
 }
 
 /* base classes */

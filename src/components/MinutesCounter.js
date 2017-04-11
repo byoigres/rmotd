@@ -2,12 +2,14 @@ import { h, render, Component } from 'preact';
 
 import styles from 'styles';
 
-const MinutesCounter = ({ children }) => (
+const formatNumber = number => Intl.NumberFormat().format(number);
+
+const MinutesCounter = ({ remainingMinutes }) => (
   <div className={styles['minutes-counter']}>
-    {children}
+    {formatNumber(remainingMinutes)}
   </div>
 );
 
-MinutesCounter.displayName = "MinutesCounter";
+MinutesCounter.displayName = 'MinutesCounter';
 
 export default MinutesCounter;

@@ -1,156 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato:400,700|Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lato:400,700|Slabo+27px|Press+Start+2P');
 
-:root {
-    --base-font-size: 16px;
-    --base-color: #fff;
-    --page-bg-color: #1976d2;
-}
+/* vendor */
+@import './vendor/normalize';
+@import './vendor/colors';
 
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+/* base */
+@import './variables';
+@import './base';
 
-body {
-    color: var(--base-color);
-    font-family: Lato;
-    font-size: var(--base-font-size);
-}
+/* containers */
+@import './containers/minutes';
 
-blockquote {
-    display: block;
-    text-align: center;
-    font-style: italic;
-    font-size: 1.3rem;
-    font-family: Slabo;
-    padding: 0 5rem;
-}
-
-p {
-    margin: 0.3rem;
-}
-
-.content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-
-    & > .minutes-container {
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
-        text-align: center;
-        background-color: var(--page-bg-color);
-        min-height: 100%;
-        & > * {
-            z-index: 5;
-        }
-
-        & .minutes-description {
-            font-size: 1.2rem;
-            display: none;
-        }
-    }
-
-    & >.info-content {
-        background-color: #f44336;
-        flex: 1;
-    }
-}
-
-.minutes-counter {
-    font-family: 'Fjalla One';
-    margin: -1.5rem 0;
-    padding: 0;
-    text-shadow:
-        0 0.0625rem 0 #ccc,
-        0 0.125rem 0 #c9c9c9,
-        0 0.1875rem 0 #bbb,
-        0 0.25rem 0 #b9b9b9,
-        0 0.3125rem 0 #aaa,
-        0 0.375rem 0.0625rem rgba(0, 0,0,.1),
-        0 0 5px rgba(0,0,0,.1),
-        0 0.0625rem 0.1875rem rgba(0,0,0,.3),
-        0 0.1875rem 0.3125rem rgba(0,0,0,.2),
-        0 0.375rem 0.625rem rgba(0,0,0,.25),
-        0 0.625rem 0.625rem rgba(0,0,0,.2),
-        0 1.25rem 1.25rem rgba(0,0,0,.15);
-}
-
-.floatig-button-container {
-    position: absolute;
-    bottom: 1rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-
-    & > .floatig-button {
-        background-color: transparent;
-        border: none;
-        text-transform: uppercase;
-        color: var(--base-color);
-    }
-}
-
-.square-grid {
-    background-color: var(--page-bg-color);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-
-    & .square-grid-square {
-        flex: 1 1 auto;
-        height: 5px;
-        width: 5px;
-    }
-}
-
-.square-path {
-    fill: var(--page-bg-color);
-}
-
-@media only screen and (width < 62rem) {
-    .header {
-        font-size: 2.3rem;
-        margin: 2rem;
-    }
-
-    blockquote {
-        font-size: 5rem;
-        display: none;
-    }
-
-    .content {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-
-        & > .minutes-container {
-            justify-content: center;
-            align-content: center;
-
-            & .minutes-description {
-                font-size: 2.3rem;
-            }
-        }
-    }
-
-    .minutes-counter {
-        font-size: 10rem;
-    }
-}
-
-@media only screen and (width > 62rem) {
-    .minutes-counter {
-        font-size: 18rem;
-    }
-}
+/* components */
+@import './components/main-layout';
+@import './components/navbar';
+@import './components/square-grid';
+@import './components/minutes-counter';

@@ -1,0 +1,22 @@
+.minutes-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    color: var(--full-white);
+    background-color: var(--primary-color-1);
+    max-width: 76rem;
+    width: 100%;
+    min-height: 100%;
+
+    & > * {
+        z-index: 5;
+    }
+
+    & .minutes-description {
+        font-size: 1.2rem;
+        display: none;
+    }
+}

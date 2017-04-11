@@ -1,0 +1,8 @@
+.main-layout {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

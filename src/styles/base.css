@@ -1,0 +1,65 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--base-color);
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+}
+
+blockquote {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-family: Slabo;
+    padding: 0 5rem;
+
+    &.blockquote-big {
+        font-size: 2.3rem;
+    }
+}
+
+p {
+    margin: 0.3rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+a {
+    color: var(--primary-color-1);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--primary-color-2);
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
+}
+
+/* base classes */
+
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    flex: 1 0 auto;
+    max-width: 76rem;
+    width: 100%;
+    
+}
+

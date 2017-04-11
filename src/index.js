@@ -18,7 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <Router>
+  <Router basename="/minutes">
     <div className={styles.content}>
       <Switch>
         <Route

@@ -153,6 +153,7 @@ if (IS_DEV) {
       { from: './src/public/favicon.ico' },
       { from: './src/public/images/M192.png', to: 'images/M192.png' },
       { from: './src/public/manifest.json' },
+      { from: './src/public/404.html' },
     ]),
     // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ExtractTextPlugin('styles.css'),

@@ -15,7 +15,7 @@ const PostcssImport = require('postcss-import');
 
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
-const PUBLIC_PATH = IS_DEV ? '/' : '/minutes/';
+const PUBLIC_PATH = '/minutes/';
 
 const postcssOptions = {
   plugins: () => [
@@ -35,7 +35,7 @@ const webpackConfig = {
   },
   output: {
     path: path.join(BASE_PATH, 'docs'),
-    publicPath: PUBLIC_PATH,
+    publicPath: '/minutes/',
     filename: '[name].js',
     sourceMapFilename: '[name].map.js',
   },
@@ -124,7 +124,7 @@ if (IS_DEV) {
     hot: true,
     inline: true,
     port: process.env.PORT || 8000,
-    publicPath: '/',
+    publicPath: PUBLIC_PATH,
     stats: {
       cached: true,
       cachedAssets: true,

@@ -1,7 +1,7 @@
 import { h, render, Component } from 'preact';
 import styles from 'styles';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <Router basename="/minutes">
+  <Router>
     <div className={styles.content}>
       <Switch>
         <Route

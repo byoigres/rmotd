@@ -1,4 +1,4 @@
-> We all have the exact same 1,440 minutes per day. You don't get more or less than Elon Musk, Bill Gates, Mark Zuckerberg or whoever inspire you. Use them wisely. <sup>[1]</sup>
+> We all have the exact same 1,440 minutes per day. You don't get more or less than Elon Musk, Bill Gates, Mark Zuckerberg or whoever inspire you. Use them wisely. <sup>1</sup>
 
 # What is this?
 
@@ -38,6 +38,6 @@ Going out to jog only takes 20 to 30 minutes, if you are a good reader you can e
 
 Notes
 
-<small>[1] This text is based on the one that appears [here][pub].</small>
+<small><sup>1</sup> This text is based on the one that appears [here][pub].</small>
 
 [pub]: https://medium.com/@chris_behnke/embrace-your-1440-e015f721a27a

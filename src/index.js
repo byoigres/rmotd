@@ -9,6 +9,7 @@ import {
 import MinutesContainer from './containers/MinutesContainer';
 import ScrollToTop from './components/ScrollToTop';
 import MainLayout from './components/Layouts/MainLayout';
+import FullPageLayout from './components/Layouts/FullPageLayout';
 
 // Markdown
 import whatIsThis from './markdown/what-is-this.md';
@@ -22,15 +23,19 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <Router hashType="hashbang">
+  <Router hashType="hashbang" className="asdasdas">
     <ScrollToTop className={styles.content}>
       <Switch>
+        <Route
+          exact
+          path="/"
+          component={() => (
+            <FullPageLayout>
+              <MinutesContainer />
+            </FullPageLayout>
+          )}
+        />
         <MainLayout>
-          <Route
-            exact
-            path="/"
-            component={MinutesContainer}
-          />
           <Route
             exact
             path="/what-is-this"
@@ -40,9 +45,6 @@ const App = () => (
             exact
             path="/about"
             component={() => <div dangerouslySetInnerHTML={{ __html: about }} />}
-          />
-          <Route
-            component={() => <blockquote>Woops! There is nothing here</blockquote>}
           />
         </MainLayout>
       </Switch>

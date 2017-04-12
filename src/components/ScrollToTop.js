@@ -8,10 +8,10 @@ class ScrollToTop extends Component {
     }
   }
 
-  render(props) {
+  render({ children, className }) {
     return (
-      <div>
-        {props.children}
+      <div className={className}>
+        {children}
       </div>
     );
   }

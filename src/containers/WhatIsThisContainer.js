@@ -18,15 +18,19 @@ const WhatIsThis = () => (
     </p>
     <h1>Why do I want this?</h1>
     <p>
-      This is not about what you want but about what you can realize by watching every minute getting empty.
+      {`
+        This is not about what you want but about what you can realize by watching every minute getting empty.
+      `}
     </p>
     <h1>What do you mean?</h1>
     <p>
-      Many times you think you don't have enough time to achieve your dreams, to fulfill
-      your goals or to do that hobby that you like so much, but many times you dedicate time
-      to meaningless activities that do not contribute anything to improve on you.
-      Time runs, in fact as you find yourself reading this text, one of the blocks is
-      about to get empty and you will have one minute less.
+      {`
+        Many times you think you don't have enough time to achieve your dreams, to fulfill
+        your goals or to do that hobby that you like so much, but many times you dedicate time
+        to meaningless activities that do not contribute anything to improve on you.
+        Time runs, in fact as you find yourself reading this text, one of the blocks is
+        about to get empty and you will have one minute less.
+      `}
     </p>
     <h1>One minute? But that is only 0.0694% of the minutes of the day</h1>
     <p>
@@ -41,7 +45,7 @@ const WhatIsThis = () => (
       a few of which you have available some of them only to investing in what you have
       always wanted. 😄
     </p>
-    <h1>I'm not following you</h1>
+    <h1>{'I\'m not following you'}</h1>
     <p>
       Well, there are activities that you probably have to do like sleep, eat, getting washed
       and dressed, work or getting in the bus. All this takes you most of the remaining minutes

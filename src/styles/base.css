@@ -20,7 +20,8 @@ blockquote {
     padding: 0 5rem;
 
     & p {
-        font-size: 2.3rem;
+        font-size: 2.3rem!important;
+        text-align: center!important;
     }
 }
 
@@ -67,6 +68,11 @@ a {
 }
 
 @media only screen and (width < 80rem) {
+    .container {
+        margin: 0 1rem;
+        width: auto;
+    }
+
     blockquote {
         padding: 0;
         margin: 2rem 0;

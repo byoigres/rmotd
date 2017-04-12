@@ -12,6 +12,14 @@
         height: 8rem;
         max-width: 76rem;
         width: 100%;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+}
+
+@media only screen and (width < 80rem) {
+    .footer .footer-container {
+        height: 5rem;
     }
 }

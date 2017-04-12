@@ -14,7 +14,7 @@ Estoy muy feliz de lanzar este sencillo proyecto  porque es mi primer lanzamient
 
 La mejor de las suertes en cada meta que tengas. **Que el tiempo te acompañe**.
 
-# Acerca de este proyecto
+## Acerca de este proyecto
 
 ¿Quieres conocer como está construido este proyecto? Ve al archivo README en el [repositorio de Github][repo] y averígualo.
 

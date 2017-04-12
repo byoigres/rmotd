@@ -14,7 +14,7 @@ I'm really happy to launch this simple project because it's my first launch, all
 
 Best of luck in every single goal you have. **May the time be with you**.
 
-# About this project
+## About this project
 
 Do you want to know how this project was built? Go to the README file in the [Github repo][repo] and find out.
 

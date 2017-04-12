@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 3rem;
-    box-shadow: 0 0.0625rem 0.125rem 0 var(--min-black);
+    box-shadow: 0 0.0625rem 1rem 0.25rem var(--min-black);
     top: 0;
     left: 0;
     display: flex;

@@ -21,15 +21,15 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <Router>
+  <Router hashType="hashbang">
     <div className={styles.content}>
       <Switch>
-        <Route
-          exact
-          path="/"
-          component={MinutesContainer}
-        />
         <MainLayout>
+          <Route
+            exact
+            path="/"
+            component={MinutesContainer}
+          />
           <Route
             exact
             path="/what-is-this"

@@ -1,3 +1,4 @@
+/* eslint react/no-danger: 0 */
 import { h, render, Component } from 'preact';
 import styles from 'styles';
 import {
@@ -6,9 +7,11 @@ import {
   Route,
 } from 'react-router-dom';
 import MinutesContainer from './containers/MinutesContainer.js';
-import WhatIsThisContainer from './containers/WhatIsThisContainer.js';
-import About from './containers/About.js';
 import MainLayout from './components/Layouts/MainLayout';
+
+// Markdown
+import whatIsThis from './markdown/what-is-this.md';
+import about from './markdown/about.md';
 
 // Enable devtools. You can reduce the size of your app by only including this
 // module in development builds. eg. In Webpack, wrap this with an `if (module.hot) {...}`
@@ -30,12 +33,12 @@ const App = () => (
           <Route
             exact
             path="/what-is-this"
-            component={WhatIsThisContainer}
+            component={() => <div dangerouslySetInnerHTML={{ __html: whatIsThis }} />}
           />
           <Route
             exact
             path="/about"
-            component={About}
+            component={() => <div dangerouslySetInnerHTML={{ __html: about }} />}
           />
         </MainLayout>
       </Switch>

@@ -6,9 +6,9 @@ Hello, my name is <i>Sergio Flores</i>, I'm a web developer and I'm really bad m
 
 One day I was reading a [publication][publication] on [medium][medium] that brought to my mind something I didn't realize: **I have a plenty of time to invest in things that I really want, I just have to be patient**.
 
-> Investing a little bit of time of the day in things you really want can brings you to amazing results in a long term.
+> Investing a little bit of time of the day in things you really want can lead you to amazing results in a long term.
 
-After reading the **Embrace Your 1440** [Medium's][publication] publication I started to wondering how many minutes did I have left of the day? Then I started writing the source code for a __simple webpage__ that tell me that. The rest of the story is right here on your screen.
+After reading the **[Embrace Your 1440][publication]** Medium's publication I started to wondering how many minutes do I have left of the day? Then I started writing the source code for a __simple webpage__ that tell me that. The rest of the story is right here on your screen.
 
 I'm really happy to launch this simple project because it's my first launch, all the other projects that I've been working on are unfinished and I hope this would change from now on.
 

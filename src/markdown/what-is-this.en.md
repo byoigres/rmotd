@@ -2,9 +2,9 @@
 
 # What is this?
 
-This is a simple web page that shows you the number of minutes remaining in the day
-in a block mode (and with a giant number in the center), each block represents one
-of the 1,440 minutes that the day has and it goes empty every second.
+This is a simple web page that shows you the number of minutes remaining in the day in a block mode (and with a giant number in the center), each block represents one of the 1,440 minutes that the day has and it goes empty every second.
+
+# Why I want this?
 
 This is not about what you want but about what you can realize by watching every minute getting empty.
 
@@ -20,9 +20,7 @@ One of the remaining and available minutes of the day.
 
 Yes, remaining and available minutes.
 
-Since the beginning of this day a plenty amount of minutes has passed and only remain
-a few of which you have available some of them only to investing in what you have
-always wanted. 😄
+Since the beginning of this day a plenty amount of minutes has passed and only remain a few of which you have available some of them only to investing in what you have always wanted. 😄
 
 # I'm not following you
 
@@ -32,7 +30,7 @@ Well, there are activities that you probably have to do like sleep, eat, getting
 
 Minutes you can use to improve yourself.
 
-Going out to jog only takes 20 to 30 minutes, if you are a good reader you can easily read a page of a book every minute, do you have an idea of a project and do not know where to start? Invest five minutes to think and develop the idea. In fact 300 minutes is approximately 20% of the day. Investing 20% of your time to improve yourself does not sound as a bad idea, think well in what you invest every minute of the day and use them wisely.
+Going out to jog only takes 20 to 30 minutes, if you are a good reader you can easily read a page of a book every minute, do you have an idea of a project and do not know where to start? Invest five minutes to think and develop the idea. In fact 300 minutes is approximately 20% of the day. Investing 20% of your time to improve yourself is not a bad idea, think well in what you invest every minute of the day and use them wisely.
 
 > The key is in not spending time, but in investing it. <p><small>Stephen R. Covey</small></p>
 

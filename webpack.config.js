@@ -54,7 +54,7 @@ const webpackConfig = {
       react: 'preact-compat',
       'react-dom': 'preact-compat',
     },
-    extensions: ['.js', 'jsx', 'json', '.css'],
+    extensions: ['.js', '.jsx', '.json', '.css', '.md'],
   },
   module: {
     rules: [
@@ -116,6 +116,10 @@ const webpackConfig = {
             }
           }
         ]
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader'
       },
     ],
   },

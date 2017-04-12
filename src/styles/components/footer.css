@@ -1,0 +1,17 @@
+.footer {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+    background-color: var(--dark-black);
+    color: var(--dark-white);
+    box-shadow: 0.125rem -0.0625rem 1rem 0.25rem var(--min-black);
+
+    & .footer-container {
+        height: 8rem;
+        max-width: 76rem;
+        width: 100%;
+        text-align: center;
+    }
+}

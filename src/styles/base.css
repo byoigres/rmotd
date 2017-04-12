@@ -60,5 +60,12 @@ a {
     flex: 1 0 auto;
     max-width: 76rem;
     width: 100%;
+}
 
+@media only screen and (width < 80rem) {
+    blockquote {
+        padding: 0;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
 }

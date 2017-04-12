@@ -74,3 +74,11 @@
         }
     }
 }
+
+@media only screen and (width < 80rem) {
+    .navbar {
+        & .navbar-container {
+            margin: 0 1rem;
+        }
+    }
+}

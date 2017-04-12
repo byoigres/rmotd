@@ -7,6 +7,7 @@
   "author": "Sergio Flores <byoigres@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "lint": "eslint ./src/**/*.js",
     "build": "cross-env NODE_ENV=production BABEL_ENV=production TARGET=web webpack",
     "dev": "webpack-dev-server --progress"
   },

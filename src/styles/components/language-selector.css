@@ -1,0 +1,7 @@
+.language-selector {
+    margin: 1rem;
+
+    & > span {
+        cursor: pointer;
+    }
+}

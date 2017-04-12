@@ -12,9 +12,14 @@
         height: 8rem;
         max-width: 76rem;
         width: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        display: flex;
+
+        > * {
+            flex: 1 0 auto;
+        }
     }
 }
 

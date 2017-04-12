@@ -18,4 +18,5 @@
 @import './components/footer';
 @import './components/header';
 @import './components/square-grid';
+@import './components/language-selector';
 @import './components/minutes-counter';

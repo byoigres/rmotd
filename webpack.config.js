@@ -13,9 +13,15 @@ const PostcssNext = require('postcss-cssnext');
 const PostcssMediaMinMax = require('postcss-media-minmax');
 const PostcssImport = require('postcss-import');
 
+// Markdown
+const marked = require('marked');
+
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
 const PUBLIC_PATH = '/minutes/';
+
+const renderer = new marked.Renderer();
+renderer.blockquote = text => `<blockquote>${text.replace(/<\/?p>/, '')}</blockquote>`;
 
 const postcssOptions = {
   plugins: () => [
@@ -96,6 +102,20 @@ const webpackConfig = {
             options: postcssOptions,
           },
         ],
+      },
+      {
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'markdown-loader',
+            options: {
+              renderer,
+            }
+          }
+        ]
       },
     ],
   },

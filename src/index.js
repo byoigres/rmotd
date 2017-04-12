@@ -1,3 +1,4 @@
+/* eslint react/no-danger: 0 */
 import { h, render, Component } from 'preact';
 import styles from 'styles';
 import {
@@ -5,10 +6,14 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import MinutesContainer from './containers/MinutesContainer.js';
-import WhatIsThisContainer from './containers/WhatIsThisContainer.js';
-import About from './containers/About.js';
+import MinutesContainer from './containers/MinutesContainer';
+import ScrollToTop from './components/ScrollToTop';
 import MainLayout from './components/Layouts/MainLayout';
+import FullPageLayout from './components/Layouts/FullPageLayout';
+
+// Markdown
+import whatIsThis from './markdown/what-is-this.md';
+import about from './markdown/about.md';
 
 // Enable devtools. You can reduce the size of your app by only including this
 // module in development builds. eg. In Webpack, wrap this with an `if (module.hot) {...}`
@@ -18,28 +23,32 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const App = () => (
-  <Router>
-    <div className={styles.content}>
+  <Router hashType="hashbang" className="asdasdas">
+    <ScrollToTop className={styles.content}>
       <Switch>
         <Route
           exact
           path="/"
-          component={MinutesContainer}
+          component={() => (
+            <FullPageLayout>
+              <MinutesContainer />
+            </FullPageLayout>
+          )}
         />
         <MainLayout>
           <Route
             exact
             path="/what-is-this"
-            component={WhatIsThisContainer}
+            component={() => <div dangerouslySetInnerHTML={{ __html: whatIsThis }} />}
           />
           <Route
             exact
             path="/about"
-            component={About}
+            component={() => <div dangerouslySetInnerHTML={{ __html: about }} />}
           />
         </MainLayout>
       </Switch>
-    </div>
+    </ScrollToTop>
   </Router>
 );
 

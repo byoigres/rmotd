@@ -13,6 +13,8 @@
 
 /* components */
 @import './components/main-layout';
+@import './components/full-page-layout';
 @import './components/navbar';
+@import './components/header';
 @import './components/square-grid';
 @import './components/minutes-counter';

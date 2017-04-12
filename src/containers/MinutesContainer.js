@@ -42,7 +42,6 @@ class MinutesContainer extends Component {
   render(props, state) {
     return (
       <div className={styles['minutes-container']}>
-        <Navbar isTransparent />
         <SquareGrid
           remainingMinutes={this.state.remainingMinutes}
           remainingSeconds={this.state.remainingSeconds}

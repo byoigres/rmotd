@@ -6,7 +6,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-import MinutesContainer from './containers/MinutesContainer.js';
+import MinutesContainer from './containers/MinutesContainer';
+import ScrollToTop from './components/ScrollToTop';
 import MainLayout from './components/Layouts/MainLayout';
 
 // Markdown
@@ -22,7 +23,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const App = () => (
   <Router hashType="hashbang">
-    <div className={styles.content}>
+    <ScrollToTop className={styles.content}>
       <Switch>
         <MainLayout>
           <Route
@@ -40,9 +41,12 @@ const App = () => (
             path="/about"
             component={() => <div dangerouslySetInnerHTML={{ __html: about }} />}
           />
+          <Route
+            component={() => <blockquote>Woops! There is nothing here</blockquote>}
+          />
         </MainLayout>
       </Switch>
-    </div>
+    </ScrollToTop>
   </Router>
 );
 

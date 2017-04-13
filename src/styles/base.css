@@ -16,7 +16,7 @@ blockquote {
     text-align: center;
     font-style: italic;
     font-size: 2.3rem;
-    font-family: Slabo;
+    font-family: "Slabo 27px";
     padding: 0 5rem;
 
     & p {

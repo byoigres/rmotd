@@ -8,6 +8,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 // PostCSS plugins
 const PostcssNext = require('postcss-cssnext');
 const PostcssMediaMinMax = require('postcss-media-minmax');
@@ -18,7 +19,7 @@ const marked = require('marked');
 
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
-const PUBLIC_PATH = '/minutes/';
+const PUBLIC_PATH = '/minutes';
 
 const renderer = new marked.Renderer();
 renderer.blockquote = text => `<blockquote>${text.replace(/<\/?p>/, '')}</blockquote>`;
@@ -141,12 +142,18 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
       filename: 'index.html',
-      favicon: './src/public/favicon.ico',
-      manifestFile: `${PUBLIC_PATH}manifest.json`,
+      // favicon: './src/public/favicon.ico',
+      manifestFile: `${PUBLIC_PATH}/manifest.json`,
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,
       inject: 'body',
+    }),
+    new FaviconsWebpackPlugin({
+      logo: './src/public/minutes-circle.png',
+      inject: true,
+      prefix: 'icons/',
+      title: 'Minutes',
     }),
   ],
 };
@@ -188,9 +195,7 @@ if (IS_DEV) {
       debug: false,
     }),
     new CopyWebpackPlugin([
-      { from: './src/public/images/M192.png', to: 'images/M192.png' },
       { from: './src/public/manifest.json' },
-      { from: './src/public/404.html' },
     ]),
     // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ExtractTextPlugin('styles.css'),

@@ -41,7 +41,7 @@ const webpackConfig = {
   },
   output: {
     path: path.join(BASE_PATH, 'docs'),
-    publicPath: '/minutes/',
+    publicPath: PUBLIC_PATH,
     filename: '[name].js',
     sourceMapFilename: '[name].map.js',
   },
@@ -142,6 +142,7 @@ const webpackConfig = {
       template: './src/template.html',
       filename: 'index.html',
       favicon: './src/public/favicon.ico',
+      manifestFile: `${PUBLIC_PATH}manifest.json`,
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,

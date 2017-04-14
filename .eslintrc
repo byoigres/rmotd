@@ -12,7 +12,7 @@
     "browser": true
   },
   "rules": {
-    "no-unused-vars": [0, { "varsIgnorePattern": "^h$" }],
+    "no-unused-vars": [2, { "varsIgnorePattern": "^h$" }],
     "import/extensions": 0,
     "import/no-extraneous-dependencies": 0,
     "react/prop-types": 0,

@@ -39,6 +39,19 @@ const webpackConfig = {
   target: 'web',
   entry: {
     app: './src/index.js',
+    // home: './src/pages/Home',
+    markdown: [
+      './src/markdown/about.en.md',
+      './src/markdown/about.es.md',
+      './src/markdown/what-is-this.en.md',
+      './src/markdown/what-is-this.es.md',
+    ],
+    vendor: [
+      'preact',
+      'preact-compat',
+      'react-intl',
+      'react-router-dom',
+    ]
   },
   output: {
     path: path.join(BASE_PATH, 'docs'),
@@ -142,7 +155,6 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
       filename: 'index.html',
-      // favicon: './src/public/favicon.ico',
       manifestFile: `${PUBLIC_PATH}/manifest.json`,
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
@@ -184,6 +196,13 @@ if (IS_DEV) {
   };
 } else {
   webpackConfig.plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['markdown', 'vendor'],
+      minChunks(module) {
+        // this assumes your vendor imports exist in the node_modules directory
+        return module.context && module.context.indexOf('node_modules') !== -1/* || module.context.indexOf('src/markdown') !== -1)*/;
+      },
+    }),
     new CleanWebpackPlugin(path.join(BASE_PATH, 'docs')),
     new webpack.DefinePlugin({
       'process.env': {

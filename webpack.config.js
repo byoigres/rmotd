@@ -19,7 +19,7 @@ const marked = require('marked');
 
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
-const PUBLIC_PATH = '/minutes';
+const PUBLIC_PATH = '/minutes/';
 
 const renderer = new marked.Renderer();
 renderer.blockquote = text => `<blockquote>${text.replace(/<\/?p>/, '')}</blockquote>`;
@@ -39,11 +39,26 @@ const webpackConfig = {
   target: 'web',
   entry: {
     app: './src/index.js',
+    // home: './src/pages/Home',
+    markdown: [
+      './src/markdown/about.en.md',
+      './src/markdown/about.es.md',
+      './src/markdown/what-is-this.en.md',
+      './src/markdown/what-is-this.es.md',
+    ],
+    vendor: [
+      'preact',
+      'preact-compat',
+      'react-intl',
+      'react-router',
+      'react-router-dom',
+    ]
   },
   output: {
     path: path.join(BASE_PATH, 'docs'),
     publicPath: PUBLIC_PATH,
-    filename: '[name].js',
+    filename: '[name].[hash].js',
+    chunkFilename: 'minutes-[name]-[chunkhash].js',
     sourceMapFilename: '[name].map.js',
   },
   resolve: {
@@ -79,6 +94,7 @@ const webpackConfig = {
                   'transform-react-jsx', {
                     pragma: 'h',
                   },
+                  'transform-object-rest-spread',
                 ],
               ],
             },
@@ -142,8 +158,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
       filename: 'index.html',
-      // favicon: './src/public/favicon.ico',
-      manifestFile: `${PUBLIC_PATH}/manifest.json`,
+      manifestFile: `${PUBLIC_PATH}manifest.json`,
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,
@@ -184,6 +199,13 @@ if (IS_DEV) {
   };
 } else {
   webpackConfig.plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['markdown', 'vendor'],
+      minChunks(module) {
+        // this assumes your vendor imports exist in the node_modules directory
+        return module.context && module.context.indexOf('node_modules') !== -1/* || module.context.indexOf('src/markdown') !== -1)*/;
+      },
+    }),
     new CleanWebpackPlugin(path.join(BASE_PATH, 'docs')),
     new webpack.DefinePlugin({
       'process.env': {
@@ -197,7 +219,6 @@ if (IS_DEV) {
     new CopyWebpackPlugin([
       { from: './src/public/manifest.json' },
     ]),
-    // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ExtractTextPlugin('styles.css'),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false,
@@ -212,7 +233,7 @@ if (IS_DEV) {
       mangle: {
         screw_ie8: true,
       },
-      sourceMap: true,
+      sourceMap: false,
     })
   );
 

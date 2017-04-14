@@ -25,6 +25,6 @@
 
 @media only screen and (width < 80rem) {
     .footer .footer-container {
-        height: 5rem;
+        height: 6rem;
     }
 }

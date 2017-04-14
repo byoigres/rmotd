@@ -118,6 +118,18 @@ const webpackConfig = {
         ]
       },
       {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              mimetype: 'image/svg+xml'
+            }
+          }
+        ]
+      },
+      {
         test: /\.json$/,
         use: 'json-loader'
       },
@@ -129,6 +141,7 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       template: './src/template.html',
       filename: 'index.html',
+      favicon: './src/public/favicon.ico',
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,
@@ -174,7 +187,6 @@ if (IS_DEV) {
       debug: false,
     }),
     new CopyWebpackPlugin([
-      { from: './src/public/favicon.ico' },
       { from: './src/public/images/M192.png', to: 'images/M192.png' },
       { from: './src/public/manifest.json' },
       { from: './src/public/404.html' },

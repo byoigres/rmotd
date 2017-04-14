@@ -1,6 +1,6 @@
 {
   "name": "minutes",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "Remaining Minutes of the Day",
   "main": "index.js",
   "repository": "git@github.com:byoigres/minutes.git",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.23.0",
     "babel-preset-es2015": "^6.24.0",
     "clean-webpack-plugin": "^0.1.16",

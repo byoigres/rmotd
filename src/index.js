@@ -1,5 +1,6 @@
 /* eslint react/no-danger: 0 */
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 // import { AppContainer } from 'react-hot-loader';
 import App from './containers/App';
 

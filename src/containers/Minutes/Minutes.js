@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import styles from './styles';
 import MinutesCounter from '../../components/MinutesCounter';

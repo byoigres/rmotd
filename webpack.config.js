@@ -98,11 +98,18 @@ const webpackConfig = {
               ],
               plugins: [
                 [
-                  'transform-react-jsx', {
-                    pragma: 'h',
-                  },
+                  'transform-react-jsx',
                   'transform-object-rest-spread',
                 ],
+                [
+                  'module-resolver', {
+                    root: ['./src'],
+                    alias: {
+                      react: 'preact-compat',
+                      'react-dom': 'preact-compat'
+                    }
+                  }
+                ]
               ],
             },
           },

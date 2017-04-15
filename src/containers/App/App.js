@@ -1,5 +1,5 @@
 /* eslint react/no-danger: 0 */
-import { h } from 'preact';
+import React from 'react';
 import {
   HashRouter as Router,
 } from 'react-router-dom';

@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import styles from './styles';
 

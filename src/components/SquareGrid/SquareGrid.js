@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import React from 'react';
 import styles from './styles';
 
 const SquareGrid = ({ remainingMinutes, remainingSeconds }) => {

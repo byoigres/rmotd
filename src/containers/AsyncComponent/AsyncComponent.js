@@ -1,4 +1,4 @@
-import { h, Component as C } from 'preact';
+import React, { Component as C } from 'react';
 
 export default (loader, collection) => (
   class AsyncComponent extends C {

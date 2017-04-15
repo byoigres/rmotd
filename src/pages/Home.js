@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import React from 'react';
 import FullPageLayout from '../containers/FullPageLayout';
 import Minutes from '../containers/Minutes';
 

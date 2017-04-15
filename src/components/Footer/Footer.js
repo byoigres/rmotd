@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import styles from './styles';
 import LanguageSelector from '../LanguageSelector';

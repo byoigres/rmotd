@@ -5,9 +5,6 @@
       "experimentalObjectRestSpread": true,
     }
   },
-  "globals": {
-    "h": true
-  },
   "env": {
     "browser": true
   },

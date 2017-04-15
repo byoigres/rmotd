@@ -1,10 +1,10 @@
 import { h } from 'preact';
-import FullPageLayout from '../components/Layouts/FullPageLayout';
-import MinutesContainer from '../containers/MinutesContainer';
+import FullPageLayout from '../containers/FullPageLayout';
+import Minutes from '../containers/Minutes';
 
 const Home = () => (
   <FullPageLayout>
-    <MinutesContainer />
+    <Minutes />
   </FullPageLayout>
 );
 

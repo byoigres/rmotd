@@ -1,5 +1,5 @@
-import { h, render, Component } from 'preact';
-import styles from 'styles';
+import { h } from 'preact';
+import styles from './styles';
 
 const SquareGrid = ({ remainingMinutes, remainingSeconds }) => {
   const fillPatter = (_remainingMinutes, row, column) => {

@@ -1,16 +1,15 @@
 import { h } from 'preact';
-import styles from 'styles';
 import {
   Switch,
   Route,
 } from 'react-router-dom';
 
-import ScrollToTop from './components/ScrollToTop';
-import MainLayout from './components/Layouts/MainLayout';
-import AsyncComponent from './components/AsyncComponent';
+import ScrollToTop from './containers/ScrollToTop';
+import MainLayout from './containers/MainLayout';
+import AsyncComponent from './containers/AsyncComponent';
 
 export default (
-  <ScrollToTop className={styles.content}>
+  <ScrollToTop>
     <Switch>
       <Route
         exact

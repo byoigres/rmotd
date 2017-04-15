@@ -1,5 +1,5 @@
-import { h, render, Component } from 'preact';
-import styles from 'styles';
+import { h } from 'preact';
+import styles from './styles';
 
 const Header = ({ text }) => (
   <h1 className={styles.header}>

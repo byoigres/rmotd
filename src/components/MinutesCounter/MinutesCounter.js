@@ -1,6 +1,6 @@
-import { h, render, Component } from 'preact';
+import { h } from 'preact';
 
-import styles from 'styles';
+import styles from './styles';
 
 const formatNumber = number => Intl.NumberFormat().format(number);
 

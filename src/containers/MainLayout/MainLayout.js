@@ -1,8 +1,8 @@
 import { h } from 'preact';
 import { FormattedMessage } from 'react-intl';
-import styles from 'styles';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import styles from './styles';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
 const MainLayout = ({ children }) => (
   <div className={styles['main-layout']}>

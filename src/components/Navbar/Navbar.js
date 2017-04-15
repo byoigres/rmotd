@@ -1,7 +1,7 @@
-import { h, Component } from 'preact';
+import { h } from 'preact';
 import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import styles from 'styles';
+import styles from './styles';
 
 const Navbar = ({ brandText, isTransparent }) => (
   <div className={`${styles.navbar} ${isTransparent ? styles['navbar-transparent'] : ''}`}>

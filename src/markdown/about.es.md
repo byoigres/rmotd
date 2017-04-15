@@ -2,7 +2,7 @@
 
 ## Acerca de mi
 
-Hola, me llamo <i>Sergio Flores</i>, soy programador web y soy realmente malo manejando mis tiempos.
+Hola, me llamo <i>Sergio</i>, soy programador web y soy realmente malo manejando mis tiempos.
 
 Un día me encontraba leyendo una [publicación][publication] en [medium][medium] que trajo a mi mente algo que no me había dado cuenta: **tengo un montón de tiempo para invertir en cosas que realmente quiero, solo tengo que ser paciente**.
 

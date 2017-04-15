@@ -1,7 +1,7 @@
 import { h } from 'preact';
 import { FormattedMessage } from 'react-intl';
-import styles from 'styles';
-import Navbar from '../Navbar';
+import styles from './styles';
+import Navbar from '../../components/Navbar';
 
 const FullPageLayout = ({ children }) => (
   <div className={styles['full-page-layout']}>

@@ -1,10 +1,9 @@
 import { h, Component } from 'preact';
 import { FormattedMessage } from 'react-intl';
-import styles from 'styles';
-import MinutesCounter from '../components/MinutesCounter';
-import SquareGrid from '../components/SquareGrid';
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
+import styles from './styles';
+import MinutesCounter from '../../components/MinutesCounter';
+import SquareGrid from '../../components/SquareGrid';
+import Header from '../../components/Header';
 
 class MinutesContainer extends Component {
   constructor() {
@@ -44,8 +43,8 @@ class MinutesContainer extends Component {
     return (
       <div className={styles['minutes-container']}>
         <SquareGrid
-          remainingMinutes={this.state.remainingMinutes}
-          remainingSeconds={this.state.remainingSeconds}
+          remainingMinutes={state.remainingMinutes}
+          remainingSeconds={state.remainingSeconds}
         />
         <Header text={<FormattedMessage id="app.title" />} />
         <MinutesCounter remainingMinutes={this.state.remainingMinutes} />

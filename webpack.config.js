@@ -13,6 +13,8 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const PostcssNext = require('postcss-cssnext');
 const PostcssMediaMinMax = require('postcss-media-minmax');
 const PostcssImport = require('postcss-import');
+const PostcssCssVariables = require('postcss-css-variables');
+const WebpackPostcssTools = require('webpack-postcss-tools');
 
 // Markdown
 const marked = require('marked');
@@ -20,12 +22,17 @@ const marked = require('marked');
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
 const PUBLIC_PATH = '/minutes/';
+const colorsMap = WebpackPostcssTools.makeVarMap('./src/styles/vendor/colors.css');
+const definitionMap = WebpackPostcssTools.makeVarMap('./src/styles/variables.css');
 
 const renderer = new marked.Renderer();
 renderer.blockquote = text => `<blockquote>${text.replace(/<\/?p>/, '')}</blockquote>`;
 
 const postcssOptions = {
   plugins: () => [
+    PostcssCssVariables({
+      variables: Object.assign(colorsMap.vars, definitionMap.vars)
+    }),
     PostcssImport(),
     PostcssMediaMinMax(),
     PostcssNext({
@@ -156,9 +163,10 @@ const webpackConfig = {
   plugins: [
     new webpack.NamedModulesPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/template.html',
+      template: './src/public/template.html',
       filename: 'index.html',
       manifestFile: `${PUBLIC_PATH}manifest.json`,
+      themeColor: definitionMap.vars['--primary-color-1'],
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,
@@ -166,9 +174,22 @@ const webpackConfig = {
     }),
     new FaviconsWebpackPlugin({
       logo: './src/public/minutes-circle.png',
+      emitStats: false,
       inject: true,
       prefix: 'icons/',
       title: 'Minutes',
+      icons: {
+        android: true,
+        appleIcon: true,
+        appleStartup: true,
+        coast: false,
+        favicons: true,
+        firefox: true,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
     }),
   ],
 };

@@ -1,5 +1,6 @@
 import { h, Component } from 'preact';
 import { withRouter } from 'react-router-dom';
+import styles from './styles';
 
 class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
@@ -8,9 +9,9 @@ class ScrollToTop extends Component {
     }
   }
 
-  render({ children, className }) {
+  render({ children }) {
     return (
-      <div className={className}>
+      <div className={styles['scroll-to-top']}>
         {children}
       </div>
     );

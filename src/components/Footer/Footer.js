@@ -1,8 +1,7 @@
-import { h, Component } from 'preact';
-import { Link } from 'react-router-dom';
+import { h } from 'preact';
 import { FormattedHTMLMessage } from 'react-intl';
-import styles from 'styles';
-import LanguageSelector from './LanguageSelector';
+import styles from './styles';
+import LanguageSelector from '../LanguageSelector';
 
 const Footer = () => (
   <div className={styles.footer}>

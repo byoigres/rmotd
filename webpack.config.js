@@ -166,7 +166,6 @@ const webpackConfig = {
       template: './src/public/template.html',
       filename: 'index.html',
       manifestFile: `${PUBLIC_PATH}manifest.json`,
-      themeColor: definitionMap.vars['--primary-color-1'],
       // minify: !IS_DEV,
       title: 'Remaining Minutes of the Day',
       hash: false,

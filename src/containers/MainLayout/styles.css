@@ -6,6 +6,16 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+
+    .container {
+        flex: 1 0 auto;
+        max-width: 76rem;
+        width: 100%;
+
+        & p {
+            text-align: justify;
+        }
+    }
 }
 
 @media only screen and (width < 80rem) {

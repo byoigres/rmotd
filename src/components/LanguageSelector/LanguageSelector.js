@@ -1,5 +1,5 @@
 /* eslint jsx-a11y/no-static-element-interactions: 0 */
-import { h } from 'preact';
+import React from 'react';
 import styles from './styles';
 
 const changeLanguage = (language) => {

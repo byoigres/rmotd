@@ -46,7 +46,6 @@ const webpackConfig = {
   target: 'web',
   entry: {
     app: './src/index.js',
-    // home: './src/pages/Home',
     markdown: [
       './src/markdown/about.en.md',
       './src/markdown/about.es.md',
@@ -54,8 +53,7 @@ const webpackConfig = {
       './src/markdown/what-is-this.es.md',
     ],
     vendor: [
-      'preact',
-      'preact-compat',
+      'react',
       'react-intl',
       'react-router',
       'react-router-dom',
@@ -72,11 +70,6 @@ const webpackConfig = {
     modules: [
       'node_modules',
     ],
-    alias: {
-      styles: path.resolve(BASE_PATH, 'src/styles'),
-      react: 'preact-compat',
-      'react-dom': 'preact-compat',
-    },
     extensions: ['.js', '.jsx', '.json', '.css', '.md'],
   },
   module: {
@@ -98,9 +91,7 @@ const webpackConfig = {
               ],
               plugins: [
                 [
-                  'transform-react-jsx', {
-                    pragma: 'h',
-                  },
+                  'transform-react-jsx',
                   'transform-object-rest-spread',
                 ],
               ],

@@ -1,27 +1,27 @@
 /* eslint react/no-danger: 0 */
-import { h } from 'preact';
+import React from 'react';
 import {
   HashRouter as Router,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import {
   IntlProvider,
 } from 'react-intl';
 import './styles';
 
-import routes from '../../Routes';
-import messages from '../../Messages';
-
 const LOCAL_STORAGE_LOCALE_KEY = '__minutes_display_locale__';
 
-const App = () => (
-  <IntlProvider
-    locale={navigator.language}
-    messages={messages[localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) || 'en']}
-  >
-    <Router hashType="hashbang">
-      {routes}
-    </Router>
-  </IntlProvider>
+const App = props => (
+  <Provider store={props.store}>
+    <IntlProvider
+      locale={navigator.language}
+      messages={props.messages[localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) || 'en']}
+    >
+      <Router hashType="hashbang">
+        {props.routes}
+      </Router>
+    </IntlProvider>
+  </Provider>
 );
 
 export default App;

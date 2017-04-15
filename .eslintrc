@@ -5,9 +5,6 @@
       "experimentalObjectRestSpread": true,
     }
   },
-  "globals": {
-    "h": true
-  },
   "env": {
     "browser": true
   },
@@ -22,6 +19,8 @@
     "import/no-unresolved": [
       2, {
         "ignore": [
+          "^react$",
+          "^react-dom$",
           "^./styles$",
           "^components/"
         ]

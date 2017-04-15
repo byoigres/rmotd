@@ -1,8 +1,15 @@
 /* eslint react/no-danger: 0 */
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 // import { AppContainer } from 'react-hot-loader';
+
+import configureStore from './store';
+
+import messages from './Messages';
+import routes from './Routes';
 import App from './containers/App';
 
+const store = configureStore();
 // Enable devtools. You can reduce the size of your app by only including this
 // module in development builds. eg. In Webpack, wrap this with an `if (module.hot) {...}`
 // check.
@@ -28,6 +35,10 @@ renderApp();
 */
 
 render(
-  <App />,
+  <App
+    store={store}
+    routes={routes}
+    messages={messages}
+  />,
   document.body,
 );

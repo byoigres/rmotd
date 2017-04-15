@@ -1,5 +1,4 @@
-import { h } from 'preact';
-
+import React from 'react';
 import styles from './styles';
 
 const formatNumber = number => Intl.NumberFormat().format(number);

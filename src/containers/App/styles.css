@@ -1,0 +1,76 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--base-color);
+    font-family: var(--base-font-family), Arial;
+    font-size: var(--base-font-size);
+}
+
+blockquote {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 2.3rem;
+    font-family: "Slabo 27px";
+    padding: 0 5rem;
+
+    & p {
+        font-size: 2.3rem!important;
+        text-align: center!important;
+    }
+}
+
+p {
+    margin: 0.3rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+a {
+    color: var(--primary-color-1);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--primary-color-2);
+        text-decoration: underline;
+        text-decoration-style: dashed;
+    }
+}
+
+/* base classes */
+.container {
+    flex: 1 0 auto;
+    max-width: 76rem;
+    width: 100%;
+
+    & p {
+        text-align: justify;
+    }
+}
+
+@media only screen and (width < 80rem) {
+    .container {
+        margin: 0 1rem;
+        width: auto;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+
+    blockquote {
+        padding: 0;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
+}

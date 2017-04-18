@@ -30,7 +30,7 @@ Bueno, hay actividades que probablemente tengas que hacer como dormir, comer, as
 
 Minutos que puedes utilizar para mejorar algo en ti.
 
-Salir a correr solamente toma de 20 a 20 minutos, si eres un buen lector fácilmente puedes leer una página de un libro cada minuto, ¿tienes una idea de un proyecto y no sabes por dónde comenzar? Invierte cinco minutos en pensar y desarrollar la idea. De hecho, 300 minutos son aproximadamente el 20% del día. Invertir 20% de tu tiempo para mejorar algo en ti no es mala idea, piensa bien en que inviertes cada minuto del día y úsalos sabiamente.
+Salir a correr solamente toma de 20 a 30 minutos, si eres un buen lector fácilmente puedes leer una página de un libro cada minuto, ¿tienes una idea de un proyecto y no sabes por dónde comenzar? Invierte cinco minutos en pensar y desarrollar la idea. De hecho, 300 minutos son aproximadamente el 20% del día. Invertir 20% de tu tiempo para mejorar algo en ti no es mala idea, piensa bien en que inviertes cada minuto del día y úsalos sabiamente.
 
 > La clave no está en dejar pasar el tiempo, sino en invertirlo. <p><small>Stephen R. Covey</small></p>
 

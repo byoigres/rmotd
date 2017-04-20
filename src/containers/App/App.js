@@ -1,7 +1,7 @@
 /* eslint react/no-danger: 0 */
 import React from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
 } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import {
@@ -17,7 +17,7 @@ const App = props => (
       locale={navigator.language}
       messages={props.messages[localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) || 'en']}
     >
-      <Router hashType="hashbang">
+      <Router basename="/minutes">
         {props.routes}
       </Router>
     </IntlProvider>

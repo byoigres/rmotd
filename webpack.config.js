@@ -22,6 +22,7 @@ const marked = require('marked');
 // Constants
 const IS_DEV = process.env.NODE_ENV !== 'production';
 const PUBLIC_PATH = '/minutes/';
+const HTML_INDEX_FILENAME = 'index.html';
 const colorsMap = WebpackPostcssTools.makeVarMap('./src/styles/vendor/colors.css');
 const definitionMap = WebpackPostcssTools.makeVarMap('./src/styles/variables.css');
 
@@ -40,6 +41,18 @@ const postcssOptions = {
     }),
   ],
 };
+
+const htmlWebpackConfig = [HTML_INDEX_FILENAME, '404.html'].map(filename => (
+  new HtmlWebpackPlugin({
+    template: './src/public/template.html',
+    filename,
+    manifestFile: `${PUBLIC_PATH}manifest.json`,
+    // minify: !IS_DEV,
+    title: 'Remaining Minutes of the Day',
+    hash: false,
+    inject: 'body',
+  })
+));
 
 const webpackConfig = {
   name: 'minutes',
@@ -153,15 +166,7 @@ const webpackConfig = {
   devtool: IS_DEV ? 'cheap-module-eval-source-map' : 'source-map',
   plugins: [
     new webpack.NamedModulesPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/public/template.html',
-      filename: 'index.html',
-      manifestFile: `${PUBLIC_PATH}manifest.json`,
-      // minify: !IS_DEV,
-      title: 'Remaining Minutes of the Day',
-      hash: false,
-      inject: 'body',
-    }),
+    ...htmlWebpackConfig,
     new FaviconsWebpackPlugin({
       logo: './src/public/minutes-circle.png',
       emitStats: false,
@@ -190,7 +195,9 @@ if (IS_DEV) {
   );
   webpackConfig.devServer = {
     contentBase: './src',
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: `${PUBLIC_PATH}${HTML_INDEX_FILENAME}`,
+    },
     host: 'localhost',
     hot: true,
     inline: true,

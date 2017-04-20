@@ -48,23 +48,7 @@ a {
     }
 }
 
-/* base classes */
-.container {
-    flex: 1 0 auto;
-    max-width: 76rem;
-    width: 100%;
-
-    & p {
-        text-align: justify;
-    }
-}
-
 @media only screen and (width < 80rem) {
-    .container {
-        margin: 0 1rem;
-        width: auto;
-    }
-
     h1 {
         font-size: 1.8em;
         text-align: center;

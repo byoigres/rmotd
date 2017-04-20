@@ -163,7 +163,7 @@ const webpackConfig = {
       },
     ],
   },
-  devtool: IS_DEV ? 'cheap-module-eval-source-map' : 'source-map',
+  devtool: IS_DEV ? 'cheap-module-inline-source-map' : 'source-map',
   plugins: [
     new webpack.NamedModulesPlugin(),
     ...htmlWebpackConfig,

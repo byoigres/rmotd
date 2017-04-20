@@ -10,12 +10,7 @@ import routes from './Routes';
 import App from './containers/App';
 
 const store = configureStore();
-// Enable devtools. You can reduce the size of your app by only including this
-// module in development builds. eg. In Webpack, wrap this with an `if (module.hot) {...}`
-// check.
-if (process.env.NODE_ENV !== 'production') {
-  require('preact/devtools');
-}
+
 /*
 const renderApp = () => {
   render(
@@ -40,5 +35,5 @@ render(
     routes={routes}
     messages={messages}
   />,
-  document.body,
+  document.getElementById('app'),
 );

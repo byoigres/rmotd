@@ -7,7 +7,7 @@
     align-items: center;
     width: 100%;
 
-    .container {
+    & .container {
         flex: 1 0 auto;
         max-width: 76rem;
         width: 100%;

@@ -40,5 +40,5 @@ render(
     routes={routes}
     messages={messages}
   />,
-  document.body,
+  document.getElementById('app'),
 );

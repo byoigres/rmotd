@@ -1,6 +1,6 @@
 {
   "name": "minutes",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Remaining Minutes of the Day",
   "main": "index.js",
   "repository": "git@github.com:byoigres/minutes.git",

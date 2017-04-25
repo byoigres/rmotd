@@ -2,19 +2,18 @@
 import React from 'react';
 import styles from './styles';
 
-const changeLanguage = (language) => {
-  localStorage.setItem('__minutes_display_locale__', language);
-  window.location.reload();
-};
-
-const changeToEnglish = () => changeLanguage('en');
-const changeToSpanish = () => changeLanguage('es');
-
-const LanguageSelector = () => (
+const LanguageSelector = ({ languages, onChangeLanguage }) => (
   <div className={styles['language-selector']}>
-    <span onClick={changeToSpanish}>Español</span>
-    {' | '}
-    <span onClick={changeToEnglish}>Ingles</span>
+    {
+      languages.map(lang => (
+        <span
+          key={lang.id}
+          onClick={() => onChangeLanguage(lang.id, lang.locale)}
+        >
+          {lang.text}
+        </span>
+      ))
+    }
   </div>
 );
 

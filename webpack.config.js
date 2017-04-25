@@ -165,9 +165,6 @@ const webpackConfig = {
   },
   devtool: IS_DEV ? 'cheap-module-inline-source-map' : 'source-map',
   plugins: [
-    new webpack.ProvidePlugin({
-      Intl: 'intl'
-    }),
     new webpack.NamedModulesPlugin(),
     ...htmlWebpackConfig,
     new FaviconsWebpackPlugin({
@@ -201,7 +198,7 @@ if (IS_DEV) {
     historyApiFallback: {
       index: `${PUBLIC_PATH}${HTML_INDEX_FILENAME}`,
     },
-    host: 'localhost',
+    host: '0.0.0.0',
     hot: true,
     inline: true,
     port: process.env.PORT || 8000,

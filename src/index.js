@@ -29,11 +29,26 @@ if (module.hot) {
 renderApp();
 */
 
-render(
-  <App
-    store={store}
-    routes={routes}
-    messages={messages}
-  />,
-  document.getElementById('app'),
+const runApp = () => (
+  render(
+    <App
+      store={store}
+      routes={routes}
+      messages={messages}
+    />,
+    document.getElementById('app'),
+  )
 );
+
+if (!global.Intl) {
+  require.ensure([
+    'intl',
+    'intl/locale-data/jsonp/en.js',
+  ], (require) => {
+    require('intl');
+    require('intl/locale-data/jsonp/en.js');
+    runApp();
+  });
+} else {
+  runApp();
+}

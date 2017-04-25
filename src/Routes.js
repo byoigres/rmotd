@@ -3,10 +3,20 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import load from 'little-loader';
+
 
 import ScrollToTop from './containers/ScrollToTop';
 import MainLayout from './containers/MainLayout';
 import AsyncComponent from './containers/AsyncComponent';
+
+if (!window.Intl) {
+  load('https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.es', (err) => {
+    if (err) {
+      console.log(err); /* eslint no-console: 0 */
+    }
+  });
+}
 
 export default (
   <ScrollToTop>

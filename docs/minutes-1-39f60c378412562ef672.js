@@ -1,0 +1,1 @@
+webpackJsonp([1],{"./src/pages/WhatIsThis.js":function(e,t,s){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=s("./node_modules/react/react.js"),a=s.n(n),r=s("./node_modules/react-intl/lib/index.es.js"),c=function(){return a.a.createElement(r.FormattedHTMLMessage,{id:"content.what-is-this"})};t.default=c}});

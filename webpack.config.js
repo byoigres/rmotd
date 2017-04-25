@@ -165,6 +165,9 @@ const webpackConfig = {
   },
   devtool: IS_DEV ? 'cheap-module-inline-source-map' : 'source-map',
   plugins: [
+    new webpack.ProvidePlugin({
+      Intl: 'intl'
+    }),
     new webpack.NamedModulesPlugin(),
     ...htmlWebpackConfig,
     new FaviconsWebpackPlugin({

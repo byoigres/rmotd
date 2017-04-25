@@ -3,19 +3,17 @@ import React from 'react';
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 import {
   IntlProvider,
 } from 'react-intl';
 import './styles';
 
-const LOCAL_STORAGE_LOCALE_KEY = '__minutes_display_locale__';
-
 const App = props => (
   <Provider store={props.store}>
     <IntlProvider
-      locale={navigator.language}
-      messages={props.messages[localStorage.getItem(LOCAL_STORAGE_LOCALE_KEY) || 'en']}
+      locale={props.locale}
+      messages={props.messages[props.locale]}
     >
       <Router basename="/minutes">
         {props.routes}
@@ -24,4 +22,10 @@ const App = props => (
   </Provider>
 );
 
-export default App;
+function mapStateToProps(state) {
+  const { locale } = state.language;
+
+  return { locale };
+}
+
+export default connect(mapStateToProps, {})(App);

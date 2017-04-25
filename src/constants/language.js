@@ -1,0 +1,6 @@
+export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
+export const LANGUAGE_SPANISH = 'LANGUAGE_SPANISH';
+export const LANGUAGE_ENGLISH = 'LANGUAGE_ENGLISH';
+export const LOCALE_EN = 'en';
+export const LOCALE_ES = 'es';
+export const LOCAL_STORAGE_LOCALE_KEY = 'LOCAL_STORAGE_LOCALE_KEY';

@@ -236,6 +236,7 @@ if (IS_DEV) {
     }),
     new CopyWebpackPlugin([
       { from: './src/public/manifest.json' },
+      { from: './src/public/humans.txt' },
     ]),
     new ExtractTextPlugin('styles.css'),
     new webpack.optimize.UglifyJsPlugin({

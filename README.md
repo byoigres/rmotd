@@ -4,5 +4,13 @@ This is a simple web page that shows you the number of minutes remaining in the 
 
 # How this project was build?
 
+Initially, this project was just a simple `static` page build using `preact` but now use `react` and bunch of other dependencies.
 
-Initially, this project was just a simple `static` page build using `preact`.
+Clone it and build.
+
+```sh
+git clone https://github.com/byoigres/minutes.git
+cd minutes
+yarn run dev
+# Navigate to http://localhost:8000/minutes
+```

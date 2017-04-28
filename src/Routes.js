@@ -3,6 +3,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 import ScrollToTop from './containers/ScrollToTop';
 import MainLayout from './containers/MainLayout';
@@ -27,6 +28,7 @@ export default (
           path="/about"
           component={AsyncComponent(() => System.import('./pages/About').then(module => module.default))}
         />
+        <Route component={() => (<h1><FormattedMessage id="app.not-found" /></h1>)} />
       </MainLayout>
     </Switch>
   </ScrollToTop>

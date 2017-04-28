@@ -1,1 +1,0 @@
-webpackJsonp([2],{"./src/pages/About.js":function(e,t,s){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=s("./node_modules/preact/dist/preact.js"),o=(s.n(n),s("./node_modules/react-intl/lib/index.es.js")),a=function(){return s.i(n.h)(o.FormattedHTMLMessage,{id:"content.about"})};t.default=a}});

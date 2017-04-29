@@ -28,7 +28,7 @@ export default (
           path="/about"
           component={AsyncComponent(() => System.import('./pages/About').then(module => module.default))}
         />
-        <Route component={() => (<h1><FormattedMessage id="app.not-found" /></h1>)} />
+        {/*<Route component={() => (<h1><FormattedMessage id="app.not-found" /></h1>)} />*/}
       </MainLayout>
     </Switch>
   </ScrollToTop>

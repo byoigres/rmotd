@@ -30,7 +30,7 @@ Well, there are activities that you probably have to do like sleep, eat, getting
 
 Minutes you can use to improve yourself.
 
-Going out to jog only takes 20 to 30 minutes, if you are a good reader you can easily read a page of a book every minute, do you have an idea of a project and do not know where to start? Invest five minutes to think and develop the idea. In fact 300 minutes is approximately 20% of the day. Investing 20% of your time to improve yourself is not a bad idea, think well in what you invest every minute of the day and use them wisely.
+Going out to jog only takes 20 to 30 minutes, if you are a good reader you can easily read a page of a book in a few minutes, do you have an idea of a project and do not know where to start? Invest five minutes to think and develop the idea. In fact 300 minutes is approximately 20% of the day. Investing 20% of your time to improve yourself is not a bad idea, think well in what you invest every minute of the day and use them wisely.
 
 > The key is in not spending time, but in investing it. <p><small>Stephen R. Covey</small></p>
 

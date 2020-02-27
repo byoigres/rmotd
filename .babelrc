@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "node": "current"
+        }
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "fileName": true
+      }
+    ],
+    "react-hot-loader/babel"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "primaryColor1": "#1976d2",
+    "primaryColor2": "#2196f3",
+    "baseFontSize": "16px",
+    "baseFontFamily": "Lato",
+    "baseColor": "rgba(0, 0, 0, 0.87)",
+    "pageBgColor": "#1976d2",
+    "fullWhite": "white",
+    "middleWhite": "rgba(255, 255, 255, 0.3)",
+    "lightWhite": "rgba(255, 255, 255, 0.54)",
+    "darkWhite": "rgba(255, 255, 255, 0.87)",
+    "darkBlack": "rgba(0, 0, 0, 0.87)",
+    "minBlack": "rgba(0, 0, 0, 0.26)"
+}

@@ -11,6 +11,6 @@ Clone it and build.
 ```sh
 git clone https://github.com/byoigres/minutes.git
 cd minutes
-yarn run dev
-# Navigate to http://localhost:8000/minutes
+yarn start
+# Navigate to http://localhost:2712/
 ```

@@ -1,0 +1,35 @@
+{
+    "rules": {
+        "react/prop-types": 0 // Eliminar
+    },
+    "env": {
+        "es6": true,
+        "browser": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly",
+        "process": "readonly"
+    },
+    "plugins": [
+        "import",
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}

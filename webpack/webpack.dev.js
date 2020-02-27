@@ -6,6 +6,7 @@ module.exports = merge(common, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: './dist',
+    publicPath: '/minutes/',
     port: 2712,
     historyApiFallback: true,
     disableHostCheck: true,

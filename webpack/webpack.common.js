@@ -9,6 +9,8 @@ const marked = require('marked');
 const renderer = new marked.Renderer();
 renderer.blockquote = text => `<blockquote>${text.replace(/<\/?p>/, '')}</blockquote>`;
 
+const PUBLIC_PATH = '/minutes/';
+
 module.exports = {
   entry: {
     app: ['./src/index.js'],
@@ -66,7 +68,8 @@ module.exports = {
       template: './src/public/template.html',
       // template: require('html-webpack-template'),
       title: 'Remaining Minutes of the Day',
-      manifestFile: "/manifest.json",
+      manifestFile: "/minutes/manifest.json",
+      basePath: PUBLIC_PATH,
       inject: 'body',
       appMountId: 'app',
       meta: [
@@ -100,12 +103,13 @@ module.exports = {
       }
     }),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.PUBLIC_PATH': `"${PUBLIC_PATH}"`
     }),
   ],
   output: {
     path: path.resolve(__dirname, '../docs'),
     filename: '[name].[hash].js',
-    publicPath: '/'
+    publicPath: '/minutes/'
   }
 };

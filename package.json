@@ -15,7 +15,7 @@
     "build-dev": "webpack -d --mode development --config webpack/webpack.dev.js",
     "build-prod": "webpack -p --mode production --config webpack/webpack.prod.js",
     "start": "webpack-dev-server --hot --mode development --config webpack/webpack.dev.js",
-    "deploy": "build-prod && gh-pages -d docs -b master"
+    "deploy": "yarn run build-prod && gh-pages -d docs -b master"
   },
   "dependencies": {
     "connected-react-router": "^6.6.1",
